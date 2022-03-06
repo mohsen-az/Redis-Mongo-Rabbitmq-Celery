@@ -1,0 +1,25 @@
+// References Relation Between Two Collection
+// Join Two Collection
+
+db.reports.aggregate(
+    [
+        {"$lookup": {"from": "users", "localField": "user", "foreignField": "_id", "as": "user"}},
+        {"$unwind": "$user"},
+        {"$lookup": {"from": "projects", "localField": "project", "foreignField": "_id", "as": "project"}},
+        {"$unwind": "$project"},
+    ]
+)
+
+db.reports.aggregate(
+    [
+        {
+            "$lookup": {
+                            "from": "users",  // Other collection
+                            "localField": "user", // Name of local filed in current collection
+                            "foreignField": "_id",  // Name of foreign field in other collection
+                            "as": "user"  // Alias in result
+                   }
+        },
+    ]
+)
+
