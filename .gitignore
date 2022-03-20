@@ -3,6 +3,8 @@ __pypackages__/*
 m-mongo/src/.idea/*
 r-redis/src/.idea/*
 r-rabbitmq/src/.idea/*
+c-celery/src/.idea/*
+c-celery/src/celerybeat-schedule
 __pycache__/
 .pytest_cache/
 
