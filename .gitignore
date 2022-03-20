@@ -4,6 +4,8 @@ m-mongo/src/.idea/*
 r-redis/src/.idea/*
 r-rabbitmq/src/.idea/*
 c-celery/src/.idea/*
+django-celery/finance/.idea/*
+
 c-celery/src/celerybeat-schedule
 __pycache__/
 .pytest_cache/
@@ -13,3 +15,8 @@ __pycache__/
 .venv
 env/
 venv/
+
+# Django stuff:
+*.log
+db.sqlite3
+db.sqlite3-journal

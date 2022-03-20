@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Callback{% endblock title %}
+
+{% block content %}
+
+    <h1>Callback</h1>
+
+    {% if status == 'OK' %}
+        <p>Ok</p>
+    {% else %}
+        <p>NOk</p>
+    {% endif %}
+
+
+{% endblock content %}

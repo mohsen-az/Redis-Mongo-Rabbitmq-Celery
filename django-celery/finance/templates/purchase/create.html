@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Purchase{% endblock title %}
+
+{% block content %}
+    <p>
+        {% if purchase %}
+            <p>Purchase number {{ purchase.pk }} created, status: {{ purchase.get_status_display }}</p>
+            <a href="{% url 'finance:payment' purchase.payment.invoice_number %}">Payment with credit card</a>
+        {% else %}
+            <p>Purchase not created</p>
+        {% endif %}
+    </p>
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Charge Wallet{% endblock title %}
+
+{% block content %}
+
+    <h1>Charge Wallet</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Payment</button>
+    </form>
+
+{% endblock content %}
